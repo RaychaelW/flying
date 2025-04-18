@@ -1,21 +1,33 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Flying Adventure</title>
+
+  <!-- ✅ Added Orbitron font for futuristic style -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  
+  <!-- ✅ Linked to external stylesheet (assumes you've updated style.css) -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div id="game-container">
     <h1>Flying Adventure</h1>
+
+    <!-- ✅ Added scene-based image container -->
+    <div id="story-image"></div>
+
+    <!-- ✅ Story text and UI containers -->
     <div id="story-text"></div>
     <div id="choices"></div>
     <div id="inventory"></div>
+
+    <!-- ✅ Undo button -->
     <button id="undo-btn">Undo</button>
   </div>
 
+  <!-- ✅ Script that handles logic and visual changes -->
   <script src="script.js"></script>
 </body>
 </html>

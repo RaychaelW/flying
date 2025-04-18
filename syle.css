@@ -1,8 +1,9 @@
+/* ✅ Apply cool sci-fi font */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Orbitron', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000;
+    background-color: #0a0e2a;
     transition: background-image 0.5s ease-in-out;
     background-size: cover;
     background-position: center;
@@ -10,32 +11,78 @@ body {
     color: white;
   }
   
+  /* ✅ Main container for story UI */
   #game-container {
     background-color: rgba(0, 0, 0, 0.7);
-    max-width: 600px;
-    margin: 5% auto;
-    padding: 20px;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+  }
+  
+  /* ✅ Heading style */
+  h1 {
+    text-align: center;
+    color: #00ffff;
+    margin-bottom: 30px;
+  }
+  
+  /* ✅ New: Dynamic scene image box */
+  #story-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
     border-radius: 12px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
   }
   
-  button {
-    background-color: #3399ff;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 10px;
-    margin: 10px 0;
-    cursor: pointer;
-    font-size: 1em;
+  /* ✅ Story text */
+  #story-text {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    line-height: 1.6;
+  }
+  
+  /* ✅ Button styling (choices) */
+  #choices button {
+    display: block;
     width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    font-size: 1em;
+    border: none;
+    border-radius: 10px;
+    background-color: #005580;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
   }
   
-  button:hover {
-    background-color: #2677cc;
+  #choices button:hover {
+    background-color: #0099cc;
   }
   
+  /* ✅ Inventory style */
   #inventory {
     margin-top: 20px;
     font-size: 0.9em;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+  }
+  
+  /* ✅ Undo button style */
+  #undo-btn {
+    margin-top: 20px;
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  #undo-btn:hover {
+    background-color: #777;
   }
