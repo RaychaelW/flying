@@ -68,12 +68,30 @@ const scenes = {
   }
 };
 
-function renderScene(sceneKey) {
-  const scene = scenes[sceneKey];
-  historyStack.push(sceneKey);
-  storyText.innerText = scene.text;
-  choices.innerHTML = "";
+const sceneBackgrounds = {
+    start: "url('https://images.unsplash.com/photo-1533674689012-46aa8d2dc7ef')",
+    jetPath: "url('https://images.unsplash.com/photo-1519677100203-a0e668c92439')",
+    dragonPath: "url('https://images.unsplash.com/photo-1509817316-bcccbf7b1e5d')",
+    secretBase: "url('https://images.unsplash.com/photo-1592461874720-8df9ef049b48')",
+    intelFound: "url('https://images.unsplash.com/photo-1616261463338-90986d07f663')",
+    crashLanding: "url('https://images.unsplash.com/photo-1520119170932-2c6f1f59f3d8')",
+    surviveCrash: "url('https://images.unsplash.com/photo-1611605697995-d9f6a971b30b')",
+    gameOver: "url('https://images.unsplash.com/photo-1545060894-3caa70f1e232')",
+    victory: "url('https://images.unsplash.com/photo-1573164713988-8665fc963095')",
+    skyPortal: "url('https://images.unsplash.com/photo-1499084732479-de2c02d45fc4')",
+    safeLanding: "url('https://images.unsplash.com/photo-1512069772997-cd879d8a02f4')"
+  };
 
+  function renderScene(sceneKey) {
+    const scene = scenes[sceneKey];
+    historyStack.push(sceneKey);
+  
+    // Update background based on scene
+    document.body.style.backgroundImage = sceneBackgrounds[sceneKey] || "none";
+  
+    storyText.innerText = scene.text;
+    choices.innerHTML = "";
+    
   if (scene.choices.length === 0) {
     const restartBtn = document.createElement("button");
     restartBtn.textContent = "Restart";

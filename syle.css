@@ -1,42 +1,41 @@
-/* style.css */
 body {
-    font-family: Arial, sans-serif;
-    background: url('https://images.unsplash.com/photo-1504198458649-3128b932f49e') no-repeat center center/cover;
-    color: #fff;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #000;
+    transition: background-image 0.5s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
   }
   
   #game-container {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     max-width: 600px;
     margin: 5% auto;
     padding: 20px;
     border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
   }
   
-  h1 {
-    text-align: center;
-  }
-  
-  #choices button {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
+  button {
+    background-color: #3399ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
     padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
     font-size: 1em;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #2677cc;
   }
   
   #inventory {
     margin-top: 20px;
     font-size: 0.9em;
-  }
-  
-  #undo-btn {
-    margin-top: 10px;
-    background-color: #444;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
   }
