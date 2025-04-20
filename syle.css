@@ -3,20 +3,18 @@ body {
     margin: 0;
     padding: 0;
     background-color: #0a0e2a;
-    transition: background-image 0.5s ease-in-out;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     color: white;
   }
   
   #game-container {
-    background-color: rgba(0, 0, 0, 0.8);
     max-width: 700px;
     margin: 50px auto;
     padding: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 15px;
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
   }
   
   h1 {

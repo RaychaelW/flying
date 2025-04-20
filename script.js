@@ -1,5 +1,5 @@
 const storyText = document.getElementById("story-text");
-const storyImage = document.getElementById("story-image"); // New: image container
+const storyImage = document.getElementById("story-image");
 const choices = document.getElementById("choices");
 const inventoryDiv = document.getElementById("inventory");
 const undoBtn = document.getElementById("undo-btn");
@@ -84,10 +84,8 @@ function renderScene(sceneKey) {
   const scene = scenes[sceneKey];
   historyStack.push(sceneKey);
 
-  // ✅ Set story text and image
   storyText.innerText = scene.text;
   storyImage.style.backgroundImage = `url('${scene.image || ""}')`;
-
   choices.innerHTML = "";
 
   if (scene.choices.length === 0) {
