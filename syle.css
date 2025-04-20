@@ -1,4 +1,3 @@
-/* ✅ Apply cool sci-fi font */
 body {
     font-family: 'Orbitron', sans-serif;
     margin: 0;
@@ -11,9 +10,8 @@ body {
     color: white;
   }
   
-  /* ✅ Main container for story UI */
   #game-container {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     max-width: 700px;
     margin: 50px auto;
     padding: 30px;
@@ -21,14 +19,12 @@ body {
     box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
   }
   
-  /* ✅ Heading style */
   h1 {
     text-align: center;
     color: #00ffff;
     margin-bottom: 30px;
   }
   
-  /* ✅ New: Dynamic scene image box */
   #story-image {
     height: 200px;
     background-size: cover;
@@ -37,14 +33,12 @@ body {
     margin-bottom: 20px;
   }
   
-  /* ✅ Story text */
   #story-text {
     font-size: 1.2em;
     margin-bottom: 25px;
     line-height: 1.6;
   }
   
-  /* ✅ Button styling (choices) */
   #choices button {
     display: block;
     width: 100%;
@@ -63,7 +57,6 @@ body {
     background-color: #0099cc;
   }
   
-  /* ✅ Inventory style */
   #inventory {
     margin-top: 20px;
     font-size: 0.9em;
@@ -71,7 +64,6 @@ body {
     border-top: 1px solid #444;
   }
   
-  /* ✅ Undo button style */
   #undo-btn {
     margin-top: 20px;
     background-color: #444;
