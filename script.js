@@ -1,3 +1,4 @@
+
 const storyText = document.getElementById("story-text");
 const storyImage = document.getElementById("story-image");
 const choices = document.getElementById("choices");
@@ -10,7 +11,7 @@ let historyStack = [];
 const scenes = {
   start: {
     text: "You're in the hangar. Choose your aircraft.",
-    image: "https://images.unsplash.com/photo-1580151455837-cf8b7bc07a96",
+    image: "images/ParkedPlane.jpg",
     choices: [
       { text: "Jet Fighter", next: "jetPath" },
       { text: "Mythical Creature", next: "dragonPath" }
@@ -18,28 +19,15 @@ const scenes = {
   },
   jetPath: {
     text: "You're flying at high altitude. A storm is approaching!",
-    image: "https://images.unsplash.com/photo-1504198458649-3128b932f49e",
+    image: "images/jet in sky.jpg",
     choices: [
       { text: "Go around the storm", next: "secretBase", log: "Avoided Storm" },
       { text: "Fly through it", next: "crashLanding", log: "Risked Storm", item: "Parachute" }
     ]
   },
-  secretBase: {
-    text: "You discover a hidden air base. Do you land?",
-    image: "https://images.unsplash.com/photo-1592461874720-8df9ef049b48",
-    choices: [
-      { text: "Yes, investigate", next: "intelFound", log: "Found Base Intel" },
-      { text: "No, keep flying", next: "safeLanding", log: "Ignored Base" }
-    ]
-  },
-  intelFound: {
-    text: "You find secret flight codes. You win!",
-    image: "https://images.unsplash.com/photo-1616261463338-90986d07f663",
-    choices: []
-  },
   crashLanding: {
     text: "You crash! Do you have a parachute?",
-    image: "https://images.unsplash.com/photo-1520119170932-2c6f1f59f3d8",
+    image: "images/Plane crash.jpg",
     choices: [
       { text: "Use Parachute", next: "surviveCrash", condition: "Parachute" },
       { text: "No parachute", next: "gameOver" }
@@ -47,17 +35,17 @@ const scenes = {
   },
   surviveCrash: {
     text: "You parachuted to safety. Well done!",
-    image: "https://images.unsplash.com/photo-1611605697995-d9f6a971b30b",
+    image: "images/landing.jpg",
     choices: []
   },
   gameOver: {
     text: "You crash and the mission ends. Game over.",
-    image: "https://images.unsplash.com/photo-1545060894-3caa70f1e232",
+    image: "images/GameOver.jpg",
     choices: []
   },
   dragonPath: {
     text: "The dragon soars. A rival dragon appears!",
-    image: "https://images.unsplash.com/photo-1524503033411-c9566986fc8f",
+    image: "images/mythical creature.jpg",
     choices: [
       { text: "Battle the creature", next: "victory", item: "Dragon Scale", log: "Won Battle" },
       { text: "Evade and ascend", next: "skyPortal", log: "Escaped Conflict" }
@@ -65,17 +53,30 @@ const scenes = {
   },
   victory: {
     text: "You defeat the rival and take its scale.",
-    image: "https://images.unsplash.com/photo-1573164713988-8665fc963095",
+    image: "images/victory.jpg",
     choices: []
   },
   skyPortal: {
     text: "You ascend into a mysterious sky portal.",
-    image: "https://images.unsplash.com/photo-1499084732479-de2c02d45fc4",
+    image: "images/cosmic vortex.jpg",
+    choices: []
+  },
+  secretBase: {
+    text: "You discover a hidden air base. Do you land?",
+    image: "images/hiddenairbase.jpg",
+    choices: [
+      { text: "Yes, investigate", next: "intelFound", log: "Found Base Intel" },
+      { text: "No, keep flying", next: "safeLanding", log: "Ignored Base" }
+    ]
+  },
+  intelFound: {
+    text: "You find secret flight codes. You win!",
+    image: "images/FlightCodes.jpg",
     choices: []
   },
   safeLanding: {
     text: "You land safely and complete your mission.",
-    image: "https://images.unsplash.com/photo-1512069772997-cd879d8a02f4",
+    image: "images/landing strip.jpg",
     choices: []
   }
 };
@@ -83,9 +84,8 @@ const scenes = {
 function renderScene(sceneKey) {
   const scene = scenes[sceneKey];
   historyStack.push(sceneKey);
-
   storyText.innerText = scene.text;
-  storyImage.style.backgroundImage = `url('${scene.image || ""}')`;
+  storyImage.style.backgroundImage = `url('${scene.image}')`;
   choices.innerHTML = "";
 
   if (scene.choices.length === 0) {
